@@ -1,0 +1,79 @@
+﻿<Page
+    x:Class="WM_AppNew.Page3"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WM_AppNew"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Width="607.667" Height="704">
+
+    <Grid Margin="0,0,132.667,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="173*"/>
+            <RowDefinition Height="467*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="Waiting"
+                   HorizontalAlignment="Center"
+                   Grid.Row="0"
+                   Margin="30,23,90,68.333"
+                   TextWrapping="Wrap" 
+                   Text="Please turn on the Bluetooth to begin." FontStyle="Italic" 
+                   VerticalAlignment="Center" Height="99" Width="355" RenderTransformOrigin="40.498,50.46" FontSize="32"/>
+
+        <Button    x:Name="connectToBluetooth"
+                   Content="Connect to BT"
+                   HorizontalAlignment="Center"
+                   Margin="23,138,290,0"
+                   VerticalAlignment="Top"
+                   Click="connectToBluetooth1"
+                   Foreground="#FF2196F3"
+                    Width="162" FontSize="12" FontWeight="Bold" Height="36"/>
+
+        <TextBlock   x:Name="bluetoothStatus"
+                   Margin="0,0,146,9.333"
+                   TextWrapping="Wrap"
+                   Text="Not connected" FontStyle="Italic" 
+                   VerticalAlignment="Bottom"
+                   Width="116" HorizontalAlignment="Right"
+                   Foreground="#FF2196F3" Height="39" FontSize="12"/>
+
+        <TextBlock x:Name="Start"
+                   HorizontalAlignment="Center"
+                   Grid.Row="1"
+                   Margin="27,53.667,98,364"
+                   TextWrapping="Wrap" 
+                   Text="now, click the button below to start." FontStyle="Italic" 
+                   VerticalAlignment="Center" Height="96" Width="350" RenderTransformOrigin="40.498,50.46" FontSize="32"/>
+
+        <Button    x:Name="letStart"
+                   Content="Start"
+                   HorizontalAlignment="Center"
+                   Margin="31,164.667,282,0"
+                   VerticalAlignment="Top"
+                   Foreground="#FF2196F3"
+                   Width="162" FontSize="12" FontWeight="Bold" Height="36" Click="letStart_Click" Grid.Row="1"/>
+
+        <Button    x:Name="Camera"
+                   Content="Take Photo"
+                   HorizontalAlignment="Center"
+                   Margin="31,228.667,282,0"
+                   VerticalAlignment="Top"
+                   Foreground="#FF2196F3"
+                   Width="162" FontSize="12" FontWeight="Bold" Height="36" Click="Camera_Click" Grid.Row="1" />
+
+        <CheckBox x:Name="checkBox" Content="Learnning?"
+                  HorizontalAlignment="Left" Margin="226,159.667,0,0"
+                  VerticalAlignment="Top" Height="37" 
+                  Grid.Row="1" Tapped="checkBox_Tapped"/>
+
+        <TextBlock   x:Name="checker"
+                   Margin="0,0,142,269"
+                   TextWrapping="Wrap"
+                   Text="" FontStyle="Italic" 
+                   VerticalAlignment="Bottom"
+                   Width="108" HorizontalAlignment="Right"
+                   Foreground="#FF2196F3" Height="38" FontSize="14" Grid.Row="1"/>
+
+    </Grid>
+
+</Page>
